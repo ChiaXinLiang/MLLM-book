@@ -37,7 +37,7 @@ A Comprehensive Guide to Multimodal Large Language Models in Vision-Language Tas
    5.4 Cross-modal Retrieval and Search
    5.5 Accessibility Technologies
 
-6. Case Studies of Prominent MLLMs
+6. Case Studies of Prominent MLLMs(SOTA)
    6.1 CLIP (Contrastive Language-Image Pre-training)
    6.2 DALL-E and Stable Diffusion
    6.3 GPT-4 with vision capabilities
