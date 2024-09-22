@@ -1,0 +1,14 @@
+generate the content as following format:
+
+title: {title}
+
+key_work: {key_word}
+
+date of publish: {release date}
+
+Core idea:
+    1. abstract: {abstract}
+    2. gap of current research: {gap of current research}
+    3. innovation: {innovation}
+    4. method: {method}
+    5. contribution: {contribution}
