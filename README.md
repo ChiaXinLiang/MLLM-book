@@ -15,9 +15,6 @@ This repository contains materials for writing a comprehensive guide on Multimod
 9. [Future Directions and Research Frontiers](#future-directions-and-research-frontiers)
 10. [Ethical Considerations and Responsible AI](#ethical-considerations-and-responsible-ai)[edit by Pu Tian]
 11. [Conclusion](#conclusion)
-12. [Resources](#resources)
-13. [Contributing](#contributing)
-14. [License](#license)
 
 ## Introduction to Multimodal Large Language Models (MLLMs)
 
