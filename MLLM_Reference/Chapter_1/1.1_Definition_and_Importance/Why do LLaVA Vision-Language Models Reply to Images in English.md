@@ -1,6 +1,6 @@
 title: Why do LLaVA Vision-Language Models Reply to Images in English?
 
-key_work: MLLM, VLM
+key_word: MLLM, VLM
 
 date of publish: 2024.07
 

@@ -7,17 +7,14 @@ This repository contains materials for writing a comprehensive guide on Multimod
 1. [Introduction to Multimodal Large Language Models (MLLMs)](#introduction-to-mllms)
 2. [Foundations of MLLMs](#foundations-of-mllms)[edit by Caitlyn]
 3. [Key Components of Vision-Language Models](#key-components-of-vision-language-models)[edit by witt]
-4. [Training and Fine-tuning MLLMs](#training-and-fine-tuning-mllms)
+4. [Training and Fine-tuning MLLMs](#training-and-fine-tuning-mllms)[edit by WeiAn]
 5. [Applications of MLLMs in Vision-Language Tasks](#applications-of-mllms-in-vision-language-tasks)[edit by Ming Li]
-6. [Case Studies of Prominent MLLMs](#case-studies-of-prominent-mllms)
+6. [Case Studies of Prominent MLLMs](#case-studies-of-prominent-mllms)[edit by Marcus]
 7. [Implementation and Practical Considerations](#implementation-and-practical-considerations)
-8. [Challenges and Limitations](#challenges-and-limitations)
+8. [Challenges and Limitations](#challenges-and-limitations)[edit by deviser]
 9. [Future Directions and Research Frontiers](#future-directions-and-research-frontiers)
-10. [Ethical Considerations and Responsible AI](#ethical-considerations-and-responsible-ai)
+10. [Ethical Considerations and Responsible AI](#ethical-considerations-and-responsible-ai)[edit by Pu Tian]
 11. [Conclusion](#conclusion)
-12. [Resources](#resources)
-13. [Contributing](#contributing)
-14. [License](#license)
 
 ## Introduction to Multimodal Large Language Models (MLLMs)
 
