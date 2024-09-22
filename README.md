@@ -5,10 +5,10 @@ This repository contains materials for writing a comprehensive guide on Multimod
 ## Table of Contents
 
 1. [Introduction to Multimodal Large Language Models (MLLMs)](#introduction-to-mllms)
-2. [Foundations of MLLMs](#foundations-of-mllms)
-3. [Key Components of Vision-Language Models](#key-components-of-vision-language-models)
+2. [Foundations of MLLMs](#foundations-of-mllms)[edit by Caitlyn]
+3. [Key Components of Vision-Language Models](#key-components-of-vision-language-models)[edit by witt]
 4. [Training and Fine-tuning MLLMs](#training-and-fine-tuning-mllms)
-5. [Applications of MLLMs in Vision-Language Tasks](#applications-of-mllms-in-vision-language-tasks)
+5. [Applications of MLLMs in Vision-Language Tasks](#applications-of-mllms-in-vision-language-tasks)[edit by Ming Li]
 6. [Case Studies of Prominent MLLMs](#case-studies-of-prominent-mllms)
 7. [Implementation and Practical Considerations](#implementation-and-practical-considerations)
 8. [Challenges and Limitations](#challenges-and-limitations)
