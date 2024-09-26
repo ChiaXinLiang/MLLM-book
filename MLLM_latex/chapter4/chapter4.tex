@@ -9,6 +9,7 @@ Pre-training forms the foundation of MLLMs. It involves training the model on va
 \subsection{Contrastive Learning (CLIP, ALIGN)}
 
 A widely used pre-training strategy is \textbf{contrastive learning}, where the model is trained to align corresponding text and image pairs while distinguishing between mismatched pairs. CLIP (Contrastive Language-Image Pre-training) and ALIGN are prominent examples of models that use this approach. During training, the model learns to represent text and images in a shared embedding space, making it easier to perform tasks like cross-modal retrieval, where the goal is to find the most relevant image or text based on the other modality.
+Recent studies have continued to explore the effectiveness of contrastive learning in aligning text and image modalities. A notable approach involves the use of differentiable local alignment techniques in video data, which enhances the model's ability to learn from temporal sequences in a self-supervised manner. This method significantly improves the model's performance on tasks requiring temporal understanding \cite{temporal_alignment_2024}. Additionally, cross-modality contrastive learning has been applied to 3D scene graph generation, where the alignment of text with 3D spatial data is crucial for understanding complex environments \cite{3d_scene_graph_2024}. Furthermore, CLIP-based event-image alignment has been developed for open-world event understanding, showcasing the versatility of contrastive learning in diverse applications \cite{event_image_alignment_2024}.
 
 \subsection{Masked Language Modeling (MLM)}
 
@@ -51,6 +52,7 @@ Few-shot and zero-shot learning have become powerful capabilities of MLLMs, allo
 In \textbf{few-shot learning}, the model is fine-tuned on a small number of examples for a new task. For MLLMs, this means that after pre-training, the model can quickly adapt to new tasks by observing just a handful of image-text pairs or task examples. Few-shot learning is especially useful for niche tasks where only a limited amount of data is available.
 
 \subsection{Zero-Shot Learning}
+
 
 \textbf{Zero-shot learning} refers to the ability of a model to perform tasks without having seen any examples of that task during training. MLLMs like CLIP are trained to generalize across tasks and domains by learning from a large variety of text-image pairs. As a result, CLIP can perform zero-shot image classification, where it assigns labels to images it has never seen before, simply by leveraging its understanding of the text and image relationships learned during pre-training.
 
