@@ -1,0 +1,1 @@
+abstract, gap of current research, innonvation in this paper, method, contribution
