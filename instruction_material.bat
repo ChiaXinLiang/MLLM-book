@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "basedir=MLLM_Book"
+set "basedir=MLLM_Reference"
 mkdir "%basedir%"
 
 :: Create main chapters
