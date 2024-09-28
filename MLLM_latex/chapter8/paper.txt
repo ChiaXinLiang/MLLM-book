@@ -1,0 +1,202 @@
+title: Rethinking Attention with Performers
+key_work: Efficient attention, linear attention, transformers
+date of publish: 2021
+Core idea:
+
+abstract: Introduces Performers, a new type of Transformer architecture with linear attention that scales linearly with sequence length.
+gap of current research: Traditional attention mechanisms have quadratic complexity, limiting their applicability to long sequences in MLLMs.
+innovation: Proposes FAVOR+ (Fast Attention Via positive Orthogonal Random features) algorithm for efficient attention computation.
+method: Uses random feature approximations of the softmax function to achieve linear complexity in attention calculations.
+contribution: Enables processing of much longer sequences in transformer models, potentially beneficial for multimodal inputs in MLLMs.
+
+
+title: ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision
+key_work: Vision-language models, transformers, minimal image preprocessing
+date of publish: 2021
+Core idea:
+
+abstract: Presents ViLT, a simplified vision-and-language transformer that processes image patches and text tokens in a single stream.
+gap of current research: Existing vision-language models rely heavily on computationally expensive convolutional networks or region features for image processing.
+innovation: Eliminates the need for external object detectors or convolutional networks in multimodal transformers.
+method: Directly feeds image patch embeddings and text embeddings into a transformer model.
+contribution: Demonstrates that minimal image preprocessing can achieve competitive performance in vision-language tasks, offering a more efficient approach for MLLMs.
+
+
+title: Longformer: The Long-Document Transformer
+key_work: Long-range dependencies, efficient attention, document processing
+date of publish: 2020
+Core idea:
+
+abstract: Introduces Longformer, a transformer model modified to handle long documents efficiently.
+gap of current research: Standard transformers are limited in processing long sequences due to quadratic attention complexity.
+innovation: Proposes a combination of local windowed attention and task-specific global attention.
+method: Uses a sliding window for local attention and allows specific tokens to attend globally, reducing overall complexity.
+contribution: Enables efficient processing of long documents, which could be adapted for handling long multimodal sequences in MLLMs.
+
+
+title: Unified-IO: A Unified Model for Vision, Language, and Multi-Modal Tasks
+key_work: Multi-task learning, vision-language models, unified architecture
+date of publish: 2022
+Core idea:
+
+abstract: Presents Unified-IO, a single model capable of handling a wide range of vision, language, and multi-modal tasks.
+gap of current research: Most models are specialized for specific modalities or tasks, limiting their generalization capabilities.
+innovation: Proposes a unified architecture that can handle multiple modalities and tasks without task-specific components.
+method: Uses a shared transformer backbone with modality-specific tokenizers and a unified output space.
+contribution: Demonstrates the potential for truly general-purpose MLLMs that can handle diverse tasks across modalities.
+
+
+title: CLIP: Learning Transferable Visual Models From Natural Language Supervision
+key_work: Vision-language pre-training, zero-shot learning, contrastive learning
+date of publish: 2021
+Core idea:
+
+abstract: Introduces CLIP, a model trained on a large dataset of image-text pairs from the internet.
+gap of current research: Existing vision models often struggle with generalization to new tasks or domains.
+innovation: Uses natural language supervision to learn transferable visual representations.
+method: Trains image and text encoders to maximize the cosine similarity of matched image-text pairs using contrastive learning.
+contribution: Demonstrates strong zero-shot transfer capabilities across a wide range of visual classification tasks, showing the potential of large-scale multimodal pre-training.
+
+
+title: DALL-E: Zero-Shot Text-to-Image Generation
+key_work: Text-to-image generation, multimodal transformers, zero-shot learning
+date of publish: 2021
+Core idea:
+
+abstract: Presents DALL-E, a transformer model capable of generating images from text descriptions.
+gap of current research: Previous text-to-image models had limited generalization capabilities and struggled with complex scenes.
+innovation: Uses a single transformer to process both text and image tokens, enabling complex reasoning across modalities.
+method: Trains on text-image pairs and uses discrete VAE for image tokenization, allowing for end-to-end training.
+contribution: Demonstrates impressive zero-shot generation capabilities for a wide range of concepts and compositions, showcasing the potential of large-scale multimodal models.
+
+
+title: Scaling Laws for Neural Language Models
+key_work: Language model scaling, performance prediction, compute-optimal models
+date of publish: 2020
+Core idea:
+
+abstract: Investigates how the performance of language models scales with model size, dataset size, and compute budget.
+gap of current research: Lack of comprehensive understanding of how different factors affect language model performance at scale.
+innovation: Identifies consistent power-law relationships in model scaling across several orders of magnitude.
+method: Trains a large number of language models of varying sizes and analyzes their performance trends on a log-log scale.
+contribution: Provides insights for efficient allocation of resources in language model development, potentially applicable to scaling MLLMs.
+
+
+title: Scaling Laws for Transfer
+key_work: Transfer learning, model scaling, vision-language models
+date of publish: 2022
+Core idea:
+
+abstract: Examines how the performance of vision-language models scales when transferred to new tasks.
+gap of current research: Limited understanding of transfer learning dynamics in large-scale multimodal models.
+innovation: Identifies scaling laws for transfer learning in vision-language models, showing how performance on new tasks relates to model size and pre-training dataset size.
+method: Trains models of varying sizes on a large vision-language dataset and evaluates transfer performance on a range of downstream tasks.
+contribution: Provides insights into efficient transfer learning strategies for multimodal models, guiding the development of more adaptable MLLMs.
+
+
+title: Large Batch Optimization for Deep Learning: Training BERT in 76 minutes
+key_work: Large batch training, optimization, BERT
+date of publish: 2020
+Core idea:
+
+abstract: Presents techniques for efficient large batch training of deep learning models, specifically applied to BERT.
+gap of current research: Training large models like BERT is time-consuming and computationally expensive.
+innovation: Introduces LAMB optimizer and techniques for layer-wise adaptive rate scaling.
+method: Combines large batch sizes with careful learning rate scheduling and adaptive optimization techniques.
+contribution: Demonstrates significant speedup in training large language models, potentially applicable to accelerating MLLM training.
+
+
+title: Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation
+key_work: Conditional computation, stochastic neurons, efficient deep learning
+date of publish: 2013
+Core idea:
+
+abstract: Proposes methods for training neural networks with stochastic neurons, enabling conditional computation.
+gap of current research: Traditional neural networks compute all neurons for every input, which is computationally inefficient.
+innovation: Introduces techniques for estimating or propagating gradients through stochastic neurons.
+method: Uses straight-through estimator and other techniques to train networks with binary stochastic neurons.
+contribution: Lays groundwork for more efficient neural network architectures, potentially useful for designing compute-efficient MLLMs.
+
+
+title: Multi-Modal Curriculum Learning for Semi-Supervised Image Classification
+key_work: Curriculum learning, semi-supervised learning, multimodal data
+date of publish: 2021
+Core idea:
+
+abstract: Proposes a curriculum learning approach for semi-supervised image classification using multimodal data.
+gap of current research: Existing semi-supervised methods often struggle with complex, multimodal data.
+innovation: Introduces a curriculum that leverages easy-to-hard ordering of samples based on multimodal difficulty scores.
+method: Combines self-training with a multimodal curriculum to gradually introduce harder samples during training.
+contribution: Demonstrates improved performance in semi-supervised image classification, providing insights for curriculum design in MLLMs.
+
+
+title: Efficient Estimation of Word Representations in Vector Space
+key_work: Word embeddings, Skip-gram, Continuous Bag-of-Words (CBOW)
+date of publish: 2013
+Core idea:
+
+abstract: Introduces efficient methods for learning high-quality word vectors from large datasets.
+gap of current research: Existing methods for learning word representations were computationally expensive and struggled with rare words.
+innovation: Proposes the Skip-gram and Continuous Bag-of-Words (CBOW) models for efficient word embedding learning.
+method: Uses neural network architectures to predict words from context or context from words, trained on large text corpora.
+contribution: Lays the foundation for modern word embedding techniques, crucial for text representation in MLLMs.
+
+
+title: Meta-learning for Few-shot Natural Language Processing: A Survey
+key_work: Meta-learning, few-shot learning, natural language processing
+date of publish: 2021
+Core idea:
+
+abstract: Provides a comprehensive survey of meta-learning techniques for few-shot learning in NLP tasks.
+gap of current research: Few-shot learning remains challenging in NLP, especially for diverse tasks and domains.
+innovation: Categorizes and analyzes various meta-learning approaches for NLP, including metric-based, optimization-based, and hybrid methods.
+method: Reviews and synthesizes a wide range of literature on meta-learning for NLP tasks.
+contribution: Offers insights into effective few-shot learning strategies for language models, potentially applicable to the language component of MLLMs.
+
+
+title: Gradient Surgery for Multi-Task Learning
+key_work: Multi-task learning, gradient conflict, optimization
+date of publish: 2020
+Core idea:
+
+abstract: Introduces a technique called "gradient surgery" to address conflicting gradients in multi-task learning.
+gap of current research: Negative transfer in multi-task learning can lead to suboptimal performance across tasks.
+innovation: Proposes a method to project conflicting task gradients onto a common direction, reducing interference.
+method: Analyzes gradient directions between tasks and modifies them to reduce conflicts while preserving task-specific information.
+contribution: Improves multi-task learning performance, potentially beneficial for MLLMs that need to handle multiple tasks across modalities.
+
+
+title: Axiomatic Attribution for Deep Networks
+key_work: Interpretability, feature attribution, Integrated Gradients
+date of publish: 2017
+Core idea:
+
+abstract: Proposes Integrated Gradients, a method for attributing a deep network's prediction to its input features.
+gap of current research: Existing attribution methods were either not sensitive to model parameters or not implementation invariant.
+innovation: Introduces an axiomatic approach to feature attribution, satisfying desirable properties like sensitivity and implementation invariance.
+method: Accumulates gradients along a straight-line path from a baseline input to the actual input.
+contribution: Provides a principled method for interpreting deep neural networks, potentially useful for explaining MLLM decisions.
+
+
+title: "Why Should I Trust You?": Explaining the Predictions of Any Classifier
+key_work: Interpretability, model explanations, LIME
+date of publish: 2016
+Core idea:
+
+abstract: Introduces LIME (Local Interpretable Model-agnostic Explanations), a technique to explain the predictions of any classifier.
+gap of current research: Existing methods for model interpretation were often model-specific or provided global explanations that might not be faithful to individual predictions.
+innovation: Proposes a model-agnostic approach that provides locally faithful explanations for individual predictions.
+method: Perturbs the input and fits a local linear model to approximate the classifier's behavior in the vicinity of a specific instance.
+contribution: Enables interpretable explanations for complex models, including potential applications in explaining MLLM decisions across modalities.
+
+
+title: Towards Robust and Verified AI: Specification Testing, Robust Training, and Formal Verification
+key_work: AI safety, formal verification, robust training
+date of publish: 2019
+Core idea:
+
+abstract: Proposes a framework for developing more robust and verifiable AI systems through specification testing, robust training, and formal verification.
+gap of current research: Existing AI systems often lack formal guarantees of safety and robustness, especially in safety-critical applications.
+innovation: Introduces a comprehensive approach combining empirical testing, robust optimization, and formal methods for AI verification.
+method: Uses specification testing to identify potential vulnerabilities, robust training to improve model resilience, and formal verification to provide guarantees on model behavior.
+contribution: Offers a roadmap for developing more trustworthy AI systems, with potential applications in ensuring the reliability of MLLMs in various domains.
