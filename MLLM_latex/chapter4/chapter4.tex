@@ -26,21 +26,53 @@ Similarly, ALIGN, developed by Google, aligns images and text by learning joint 
 
 Both CLIP and ALIGN exemplify the power of contrastive learning in multimodal AI systems, effectively bridging the gap between textual and visual data through shared embedding spaces.
 
-\subsection{Masked Language Modeling (MLM)}
 
-MLLMs often incorporate \textbf{masked language modeling}, where the model is trained to predict missing words in a sentence based on the surrounding context. For MLLMs, this can be extended to \textbf{multimodal masked modeling}, where the model must predict masked words or image regions, forcing it to learn joint representations of text and images.
+\subsection{Masked Language Modeling (MLM) in Multimodal Large Language Models}
+
+Masked Language Modeling (MLM) is a traditional technique where the model is trained to predict missing words in a sentence using the surrounding context. In Multimodal Large Language Models (MLLMs), this technique is extended to \textbf{multimodal masked modeling}, where the model must predict masked words and image regions, forcing it to learn joint representations of text and images \cite{ComprehensiveSurvey2024}.
+
+MLLMs employing MLM techniques are used in various applications, including object-centric robotic manipulation, where the model predicts the precise end-effector pose by understanding both the textual instructions and the visual context. This capability is crucial for developing embodied AI systems that can interact with and manipulate their environment effectively \cite{ManipLLM2024}.
+
+The training of MLLMs often involves a combination of image-text contrastive learning, image-text matching, and masked language modeling. These tasks collectively help the model to align visual and textual modalities, improving its performance in tasks such as image captioning, visual question answering, and more complex multimodal interactions \cite{OverviewLMM2024}.
+
+Ongoing research in this area focuses on enhancing the efficiency and accuracy of MLLMs by refining the MLM techniques used, exploring new architectures, and integrating more diverse datasets. These efforts aim to create models that are not only more capable of understanding multimodal inputs but also more efficient in terms of computational resources \cite{ResearchDevelopment2023}.
+
+
 
 \subsection{Visual Question Answering (VQA) Pre-training}
 
-Some models are pre-trained on tasks like \textbf{Visual Question Answering (VQA)} or image captioning. In this case, the model is exposed to paired questions and images and must learn to infer relationships between text and visual content. This approach often leverages cross-attention mechanisms to align the two modalities.
+Visual Question Answering (VQA) is a crucial task in the realm of multimodal models, where models are pre-trained on tasks such as VQA or image captioning. In this scenario, the model is exposed to paired questions and images, requiring it to learn how to infer relationships between text and visual content. This approach often leverages cross-attention mechanisms to align the two modalities effectively \cite{MaskedVisionLanguage2023}.
+
+Recent advancements in VQA pre-training have shown significant success, particularly in specialized domains such as medical imaging. These models are trained using both unimodal and multimodal contrastive losses, enhancing their ability to understand complex visual and textual interactions. The use of retrieval-augmented methods has further improved the performance of VQA systems by incorporating additional contextual information from large datasets \cite{RAMMBiomedicalVQA2023}.
+
+However, challenges remain due to the limited availability of diverse multimodal datasets, especially in niche areas like medical VQA. This scarcity necessitates innovative approaches to data augmentation and transfer learning to ensure robust model performance across various applications \cite{MedicalVQA2023}.
+
+Ongoing research focuses on refining these pre-training techniques and expanding the dataset availability to improve the versatility and accuracy of VQA models in different contexts \cite{pengfeiliHEU2023}.
+
 
 \subsection{Vision-and-Language Pretraining (VLP)}
 
-\textbf{Vision-and-Language Pretraining (VLP)} strategies involve pre-training on diverse tasks such as image-text matching, masked language modeling, and next-sentence prediction, all within a multimodal context. By training on multiple tasks simultaneously, the model develops a richer understanding of how language and vision interact. Models like UNITER, ViLBERT, and OSCAR use this multitask approach to enhance multimodal reasoning.
+\textbf{Vision-and-Language Pretraining (VLP)} strategies are crucial for developing robust multimodal models. These strategies involve pre-training on diverse tasks such as image-text matching, masked language modeling, and next-sentence prediction, all within a multimodal context. By engaging in multiple tasks simultaneously, the model gains a comprehensive understanding of the interactions between language and vision, enabling it to perform complex reasoning tasks \cite{VisoAI2024}.
+
+Models like UNITER, ViLBERT, and OSCAR are prime examples of this multitask approach, which enhances multimodal reasoning by integrating cross-modal fusions within a dual-encoder architecture. This architecture allows the models to effectively process and align visual and textual data, improving their performance across various multimodal tasks \cite{FlexibleVLP2023}.
+
+Moreover, recent advancements in VLP strategies have addressed challenges related to heterogeneity in federated learning environments, particularly in specialized domains such as biomedical applications. These improvements have been instrumental in refining the flexibility and adaptability of VLP models, making them more efficient in handling diverse datasets and tasks \cite{HeterogeneityFederatedVLP2024}.
+
+Ongoing research continues to explore innovative pretraining strategies, aiming to further enhance the capabilities and efficiency of VLP models in understanding and reasoning about multimodal data \cite{FeedbackModalSearch2024}.
+
+
 
 \section{Fine-Tuning for Specific Tasks}
 
-After pre-training, MLLMs are typically fine-tuned on specific tasks to maximize their performance in particular domains. Fine-tuning adapts the general knowledge gained during pre-training to the nuances of a specific task, ensuring that the model can deliver more accurate and relevant results.
+After pre-training, Multimodal Large Language Models (MLLMs) are typically fine-tuned on specific tasks to maximize their performance in particular domains. Fine-tuning is an essential process that adapts the general knowledge gained during pre-training to the nuances of a specific task, ensuring that the model can deliver more accurate and relevant results \cite{TenyksBlogger2024}.
+
+This process involves adjusting the model's parameters using task-specific data, which helps in aligning the model's capabilities with the requirements of the target application. Techniques such as task-specific instruction tuning and the use of multiway adapters have been developed to make fine-tuning more efficient and less resource-intensive \cite{EfficientMLLMs2024}. 
+
+Moreover, fine-tuning allows MLLMs to leverage their multimodal understanding, enhancing their ability to process and integrate information from different modalities, such as text and images, which is particularly beneficial in complex tasks \cite{MultiwayAdapter2024}.
+
+Ongoing research aims to further streamline fine-tuning processes, reducing the computational costs and improving the adaptability of MLLMs to a wider range of tasks and domains \cite{RobustInstructionTuning2024}.
+
+
 
 \subsection{Task-Specific Datasets}
 
@@ -58,33 +90,38 @@ In some cases, models are fine-tuned on multiple tasks simultaneously, a techniq
 
 Fine-tuning is essential for tasks that require the model to reason across modalities, such as cross-modal retrieval or referring expression comprehension (where the model must identify specific objects in an image based on a text description). The goal is to align the visual and textual representations effectively during this phase.
 
+\subsection{Cross-Modal Tasks}
+
+Fine-tuning is essential for tasks that require the model to reason across modalities, such as cross-modal retrieval or referring expression comprehension, where the model must identify specific objects in an image based on a text description. The goal during this phase is to effectively align the visual and textual representations \cite{CrossModalTasks2024}.
+
 \section{Few-Shot and Zero-Shot Learning in MLLMs}
 
-Few-shot and zero-shot learning have become powerful capabilities of MLLMs, allowing them to generalize to new tasks with little to no task-specific data. This is particularly valuable when labeled datasets are scarce or expensive to curate.
+Few-shot and zero-shot learning have become powerful capabilities of Multimodal Large Language Models (MLLMs), allowing them to generalize to new tasks with little to no task-specific data. This is particularly valuable when labeled datasets are scarce or expensive to curate \cite{FewShotZeroShotLearning2024}.
 
 \subsection{Few-Shot Learning}
 
-In \textbf{few-shot learning}, the model is fine-tuned on a small number of examples for a new task. For MLLMs, this means that after pre-training, the model can quickly adapt to new tasks by observing just a handful of image-text pairs or task examples. Few-shot learning is especially useful for niche tasks where only a limited amount of data is available.
+In \textbf{few-shot learning}, the model is fine-tuned on a small number of examples for a new task. For MLLMs, this means that after pre-training, the model can quickly adapt to new tasks by observing just a handful of image-text pairs or task examples. Few-shot learning is especially useful for niche tasks where only a limited amount of data is available \cite{FewShotLearning2024}.
 
 \subsection{Zero-Shot Learning}
 
-\textbf{Zero-shot learning} refers to the ability of a model to perform tasks without having seen any examples of that task during training. MLLMs like CLIP are trained to generalize across tasks and domains by learning from a large variety of text-image pairs. As a result, CLIP can perform zero-shot image classification, where it assigns labels to images it has never seen before, simply by leveraging its understanding of the text and image relationships learned during pre-training.
+\textbf{Zero-shot learning} refers to the ability of a model to perform tasks without having seen any examples of that task during training. MLLMs like CLIP are trained to generalize across tasks and domains by learning from a large variety of text-image pairs. As a result, CLIP can perform zero-shot image classification, where it assigns labels to images it has never seen before, simply by leveraging its understanding of the text and image relationships learned during pre-training \cite{ZeroShotLearning2024}.
 
 \subsection{Transfer Learning}
 
-Few-shot and zero-shot learning are made possible by \textbf{transfer learning}, where knowledge gained from pre-training on one set of tasks is transferred to new, unseen tasks. This is particularly effective in MLLMs because they are trained on large, diverse multimodal datasets that cover a wide range of text and visual domains, allowing for strong generalization across tasks.
+Few-shot and zero-shot learning are made possible by \textbf{transfer learning}, where knowledge gained from pre-training on one set of tasks is transferred to new, unseen tasks. This is particularly effective in MLLMs because they are trained on large, diverse multimodal datasets that cover a wide range of text and visual domains, allowing for strong generalization across tasks \cite{TransferLearning2024}.
 
 \section{Instruction Tuning for MLLMs}
 
-Instruction tuning is a newer technique that enhances the ability of MLLMs to follow human instructions across modalities. It involves fine-tuning the model using explicit instructions in natural language, enabling the model to perform a broader range of tasks with greater flexibility and accuracy.
+Instruction tuning is a newer technique that enhances the ability of MLLMs to follow human instructions across modalities. It involves fine-tuning the model using explicit instructions in natural language, enabling the model to perform a broader range of tasks with greater flexibility and accuracy \cite{InstructionTuning2024}.
 
 \subsection{Natural Language Instructions}
 
-Instruction tuning uses datasets where tasks are framed as natural language instructions. For instance, instead of providing just an image and asking the model to generate a caption, the model is given a prompt like, \textit{"Describe the image in detail."} This allows the model to understand human-like instructions and follow them more closely.
+Instruction tuning uses datasets where tasks are framed as natural language instructions. For instance, instead of providing just an image and asking the model to generate a caption, the model is given a prompt like, \textit{"Describe the image in detail."} This allows the model to understand human-like instructions and follow them more closely \cite{NaturalLanguageInstructions2024}.
 
 \subsection{Multimodal Instruction Tuning}
 
-Instruction tuning can also be applied to multimodal tasks. In this case, the model is trained to follow multimodal prompts that involve both text and images. For example, a task might include an image and the instruction, \textit{"What is the person in the image doing?"} This helps the model learn to follow complex, human-like commands that span multiple modalities.
+Instruction tuning can also be applied to multimodal tasks. In this case, the model is trained to follow multimodal prompts that involve both text and images. For example, a task might include an image and the instruction, \textit{"What is the person in the image doing?"} This helps the model learn to follow complex, human-like commands that span multiple modalities \cite{MultimodalInstructionTuning2024}.
+
 
 \subsection{Improving Generalization}
 
