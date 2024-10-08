@@ -1,4 +1,15 @@
 \chapter{Introduction to Multimodal Large Language Models (MLLMs)}
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
+
+\chapterauthor{Marcus}
+
 
 \section{Definition and Importance of MLLMs}
 
@@ -86,14 +97,6 @@ Several key architectural innovations have enabled the development of MLLMs:
     \item \textbf{Vision Transformers (ViT):} These apply transformer architectures directly to image patches, enabling more seamless integration of vision and language models. Instead of processing an image as a whole, ViT breaks it down into smaller patches and processes them sequentially, much like how transformers process words in a sentence.
 \end{itemize}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{cross_modal_transformer.png}
-    \caption{Simplified diagram of a Cross-Modal Transformer architecture}
-    \label{fig:cross_modal_transformer}
-\end{figure}
-
-Figure \ref{fig:cross_modal_transformer} illustrates how a cross-modal transformer processes both text and image inputs, fusing the information through cross-attention mechanisms to produce a unified output.
 
 \textbf{Impact on AI Applications:}
 The convergence of NLP and computer vision through MLLMs has enabled new capabilities in various AI applications:
